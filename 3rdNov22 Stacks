@@ -1,0 +1,28 @@
+this is the solution of the gfg course problem.
+Here we have solved the string pattern question using stack 
+In which we solve the problem like how to reduce the repeating characters of a string.
+like str = "aaaabbbbccccdeddddfff" ....... answer will be abcdedf because all the repeating characters are removed.
+
+
+
+class Solution
+{
+    //Function to remove consecutive duplicates from given string using Stack.
+    public static String removeConsecutiveDuplicates(String str)
+    {
+        // Your code here
+        Stack<Character> st = new Stack<>();
+        char ch = str.charAt(0);
+        String ans = "";
+        ans+=ch;
+        st.push(ch);
+        for(int i=1; i<str.length();i++){
+                 char ch2 = str.charAt(i);
+            if(!st.isEmpty() && ch2!= st.peek()){
+                ans+=ch2;
+            }
+            st.push(ch2);
+        }
+        return ans;
+    }
+}
