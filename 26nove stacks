@@ -1,3 +1,5 @@
+//next greater element to the right.
+
 import java.io.*;
 import java.util.*;
 
