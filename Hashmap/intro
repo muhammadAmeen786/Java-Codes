@@ -1,0 +1,22 @@
+/ Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+import java.io.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        HashSet<Integer> h = new HashSet<>();
+        h.add(1);
+        h.add(2);// this add is used to add the values.
+        h.add(5);
+       
+        h.add(6);
+        h.add(3);
+        h.add(2);// repeated values will not be added.
+        h.add(1);
+         System.out.println(h.size()); // this will print the size of the hashmap.
+      for(int i: h){
+          System.out.println(i); // this will print all of the entries. out there in the hashset.
+      }
+      h.clear();// this method will clear all the entries.
+    }
+}
