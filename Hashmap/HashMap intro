@@ -1,0 +1,23 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+import java.io.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        HashMap<String,Integer>hm = new HashMap<>();
+        hm.put("HOW ARE YOU",1);
+        hm.put("HELO",2);
+        hm.put("WOW",3);
+        if(hm.containsKey("HELO")){
+            System.out.println("yes the value  is present ");// this is true hence will get printed.
+        }
+        if(hm.containsValue(3)){
+            System.out.println("yes the key is present "); // yes it it is true;
+            
+        }
+        
+        System.out.println(hm.get("HELO"));// 2
+        System.out.println(hm);// will print entire HMap.
+        System.out.println(hm.size());// 3 is the output.
+    }
+}
