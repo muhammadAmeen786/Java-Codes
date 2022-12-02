@@ -1,0 +1,32 @@
+import java.util.*;
+import java.io.*;
+
+
+class HelloWorld {
+    public static void main(String[] args) {
+        int [] arr = {1,3,5,3,4,3,3,5};
+        HashMap<Integer,Integer>hm = new HashMap<>(); // create a hashmap to store key value pairs.
+        for(int i=0; i<arr.length; i++){
+            if(hm.containsKey(arr[i])){
+                int of = hm.get(arr[i]);
+                int nf = of+1; // if element is already present dont add it ...but increase its frequency first and then add it.
+                hm.put(arr[i],nf);
+                
+            }
+            else{
+                hm.put(arr[i],1); // if element is not present directly add it.
+                
+            }
+        }
+       System.out.println(hm);
+    //   System.out.println(hm.keySet()); // this will print all the keys of a hashmap.
+       int ln = 0; //ln stands for largest frequency.
+       for(int i: hm.keySet()){
+           if(hm.get(i) > ln){
+               ln = hm.get(i); 
+           }
+           
+       }
+       System.out.println(ln); // print the longest coming element.
+    }
+}
