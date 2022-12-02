@@ -30,3 +30,5 @@ class HelloWorld {
        System.out.println(ln); // print the longest coming element.
     }
 }
+
+// we can also use getOrDefault(x,0) function which will use x as the value if it is already present or it will by default keep it as 0.
